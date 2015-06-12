@@ -8,11 +8,6 @@ define(function(require){
 
 	var ProductListView = Backbone.View.extend({
 
-		events:{
-			// 'focus #searchBox': 'getAutocomplete',
-   //  		'keydown #searchBox': 'fetchCollection'
-		},
-
 		initialize:function(){
 
 			this.productCollection = new ProductList();
@@ -28,18 +23,7 @@ define(function(require){
 			}).render();
 
 
-		},
-	    fetchCollection: function() {
-	      if (this.collectionFetched) return;
-		      this.productCollection.fetch();
-		      this.collectionFetched = true;
-	    },
-	    getAutocomplete: function () {
-	      $("#searchBox").autocomplete({
-	        source: JSON.stringify(this.myCollection)
-	      });
-	    }
-
+		}
 	});
 
 	return ProductListView;
