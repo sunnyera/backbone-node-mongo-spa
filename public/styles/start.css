@@ -1,0 +1,52 @@
+.container{
+	margin:0 auto;
+	width:60%;
+}
+.menuItems ul{
+	-webkit-margin-before:0px;
+	-webkit-margin-after:0px;
+	-webkit-padding-start:0px;	
+}
+.menuItems ul li{
+	display:inline-block;
+	padding: 10px 25px 10px 25px;
+	background: lightblue;
+}
+
+.menuItems ul li.active{
+	background: #6992CB;
+}
+
+.fieldsContainer{
+	padding: 8px;
+	background: lightblue;
+}
+#searchBox{
+	width:100%;
+	font-size:18px;
+	padding:5px;
+}
+.searchBoxDiv{
+	margin:0 auto;
+	width:50%;
+}
+.productInfo table{
+	margin:0 auto;
+	width:85%;
+	padding: 5px;
+}
+.productInfo table input{
+	display: block;
+	margin:5px;
+	background: lightyellow;
+	width:50%;
+	padding:3px;
+	font-size: 14px;
+}
+.productInfo table tr{
+	background: white;
+	margin:3px;
+}
+.productInfo table td{
+	padding:10px;
+}

@@ -1,0 +1,14 @@
+{
+  "name": "productSearch",
+  "version": "1.0.0",
+  "description": "product search box",
+  "main": "app.js",
+
+  "dependencies":{
+  	"express":"latest",
+  	"mongoose":"latest"
+  },
+
+    "author": "himanshu tripathi"
+
+}
