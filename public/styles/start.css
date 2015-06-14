@@ -9,12 +9,19 @@
 }
 .menuItems ul li{
 	display:inline-block;
+	padding:0px;
+	background: #6992CB;
+}
+
+.menuItems li a{
+	margin: 0px; 
+	display: block;
 	padding: 10px 25px 10px 25px;
-	background: lightblue;
+
 }
 
 .menuItems ul li.active{
-	background: #6992CB;
+	background: lightblue;
 }
 
 .fieldsContainer{
@@ -49,4 +56,10 @@
 }
 .productInfo table td{
 	padding:10px;
+}
+.help-block{
+	font-size: 12px;
+}
+span .hidden{
+	display: none 
 }

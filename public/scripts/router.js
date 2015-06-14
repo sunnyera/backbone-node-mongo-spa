@@ -8,9 +8,9 @@ define (function(require){
   var AppRouter = Backbone.Router.extend({
     routes: {
       // Define some URL routes
-      '':'showIndex',
-      'home':'showIndex',
-      'product': 'showProduct',
+      '':'showProduct',
+      'showProduct': 'showProduct',
+      'addProduct' : 'addProduct',
       '*actions': 'defaultAction'
 
     },
@@ -18,16 +18,19 @@ define (function(require){
     defaultAction : function(actions){
     	 console.log('No route:', actions);
     },
-    showIndex:function(){
-        vent.trigger('home:show');
-    },
 
   	showProduct: function(){
   	   	vent.trigger('product:show');
-  	}
+  	},
+
+    addProduct:function(){
+        vent.trigger('product:add');
+    }
+
   });
 
   var initialize = function(){
+
     var app_router = new AppRouter;
     Backbone.history.start();
   };

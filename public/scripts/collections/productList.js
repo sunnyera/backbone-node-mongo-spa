@@ -7,7 +7,7 @@ define(function(require){
 	var ProductList = Backbone.Collection.extend({
     
 		model: Product,
-		url:'http://localhost:3000/data'
+		url:'http://localhost:3000/products'
     	//url: 'http://localhost:8080/products'
 
 	});

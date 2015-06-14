@@ -1,22 +1,46 @@
+/*globals window,console,document*/
+
 define(function(require){
 
 	require('backbone'); 
 
 	var Product = Backbone.Model.extend({
 		
+		idAttribute: "_id",
+
 		defaults:{
-			name:''
-			// productId:0,
-			// Quantity:0,
-			// ProductName:'',
-			// CostPrice:0,
-			// SellingPrice:0
+			productId:0,
+			quantity:0,
+			productName:'',
+			costPrice:0,
+			sellingPrice:0
 		},
 
-		label:function(){
-			return this.get("name");
-		}
+		urlRoot: '/product',
 
+		validation: {
+		    productName: {
+		      required: true,
+		       msg: 'Please enter a valid product name'
+		    },
+		    quantity:{
+		    	min:1,
+		    	msg:'please enter valid quantity'
+		    },
+		    productId: {
+		      required: true,
+		       msg: 'Please enter a valid product id'
+		    },
+		    costPrice:{
+		    	required:true,
+		    	msg: 'please enter valid cost price'
+		    },
+		    sellingPrice:function(value,attr,computedState){
+		    	if(value < this.get('costPrice')){
+		    		return 'selling price should be more than cost';
+		    	}
+		    }
+		}
 
 	});
 

@@ -6,7 +6,8 @@
 
   "dependencies":{
   	"express":"latest",
-  	"mongoose":"latest"
+  	"mongoose":"latest",
+  	"body-parser":"latest"
   },
 
     "author": "himanshu tripathi"

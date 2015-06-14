@@ -1,32 +1,36 @@
+
 				<table>
 					<tr>
 						<td>
 							<label>Product Id : </label>
-							<span>12345</span>
+							<span><%=data['productId']%></span>
 						</td>
 						<td>
-							<label>Quality : </label>
-							<span>20</span>
+							<label>Quantity : </label>
+							<span><%=data['quantity']%></span>
 						</td>
 					</tr>
 					<tr>
 						<td colspan="2">
 							<label>Product Name </label>
-							<input type="text"/>
+							<input type="text" name="productName" id="productName" value=<%=data['productName']%>></input>
+							<span class="help-block hidden"></span>
+
 						</td>
 					</tr>
 					<tr>
 						<td colspan="2">
 							<label>Cost Price : </label>
-							<span>700.00</span>
+							<span><%=data['costPrice']%></span>
 						</td>
 					</tr>
 					<tr>
 						<td colspan="2">
 							<label>Selling Price </label>
-							<input type="text"/>
+							<input name="sellingPrice" type="text" id="sellingPrice" value=<%=data['sellingPrice']%>></input>
+							<span class="help-block hidden"></span>
+
 						</td>
 					</tr>
 
 				</table>
-			
