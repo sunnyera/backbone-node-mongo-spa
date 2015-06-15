@@ -50,6 +50,9 @@
 	padding:3px;
 	font-size: 14px;
 }
+.sellingPriceEdit:focus ,.productNameEdit:focus{
+	background: pink;
+}
 .productInfo table tr{
 	background: white;
 	margin:3px;

@@ -1,5 +1,6 @@
 var express = require('express'),
-	bodyParser = require('body-parser')
+	bodyParser = require('body-parser'),
+	compression = require('compression'),
 	app = express(),
 	mongoose = require('mongoose'),
 	Product = require('./server/Product');
@@ -8,6 +9,8 @@ var express = require('express'),
 	app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 	  extended: true
 	}));
+
+	app.use(compression()); //compress all requests
 
 //static files folder 
 	app.use(express.static(__dirname + '/public'));
@@ -20,7 +23,7 @@ var express = require('express'),
 	var db = mongoose.connection;
 	db.on('error', console.error.bind(console, 'connection error:'));
 	db.once('open', function (callback) {
-	  
+		console.log('Database Connected');  
 	});
 
 

@@ -19,9 +19,12 @@ define(function(require){
 		urlRoot: '/product',
 
 		validation: {
-		    productName: {
-		      required: true,
-		       msg: 'Please enter a valid product name'
+
+		    productName:function(val){
+		    	//alphanumeric test
+		    	if(!val && !/^[a-z0-9]+$/i.test(val)){
+		    		return 'please enter valid alphanumeric product name';
+		    	}
 		    },
 		    quantity:{
 		    	min:1,
@@ -36,8 +39,8 @@ define(function(require){
 		    	msg: 'please enter valid cost price'
 		    },
 		    sellingPrice:function(value,attr,computedState){
-		    	if(value < this.get('costPrice')){
-		    		return 'selling price should be more than cost';
+		    	if(value <= this.get('costPrice')){
+		    		return 'selling price should be more or equal to cost';
 		    	}
 		    }
 		}

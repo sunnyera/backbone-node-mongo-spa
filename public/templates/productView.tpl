@@ -13,7 +13,7 @@
 					<tr>
 						<td colspan="2">
 							<label>Product Name </label>
-							<input type="text" name="productName" id="productName" value=<%=data['productName']%>></input>
+							<input type="text" name="productName" id="productName" class="productNameEdit" value=<%=data['productName']%>></input>
 							<span class="help-block hidden"></span>
 
 						</td>
@@ -27,7 +27,7 @@
 					<tr>
 						<td colspan="2">
 							<label>Selling Price </label>
-							<input name="sellingPrice" type="text" id="sellingPrice" value=<%=data['sellingPrice']%>></input>
+							<input name="sellingPrice" type="text" id="sellingPrice" class="sellingPriceEdit" value=<%=data['sellingPrice']%> ></input>
 							<span class="help-block hidden"></span>
 
 						</td>

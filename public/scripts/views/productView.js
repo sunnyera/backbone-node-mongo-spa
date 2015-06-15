@@ -65,6 +65,8 @@ define(function(require) {
                 success :function(m){
                     that.collection.remove(m);
                     that.collection.add(that.model._previousAttributes);
+                    that.model.isValid();
+                    $(e.target).blur();
                 },
                 error: function(err){
                   console.log('error: ' + err);
