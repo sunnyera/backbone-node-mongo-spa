@@ -22,7 +22,7 @@ define(function(require){
 
 		    productName:function(val){
 		    	//alphanumeric test
-		    	if(!val && !/^[a-z0-9]+$/i.test(val)){
+		    	if(!val || !/^[a-z0-9]+$/i.test(val)){
 		    		return 'please enter valid alphanumeric product name';
 		    	}
 		    },
